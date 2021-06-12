@@ -4,6 +4,10 @@ on: [push]
 
 jobs:
 
+  check-symlinks:
+      runs-on: ubuntu-latest
+      steps:
+        - run: if [[ $(find . -xtype l) ]]; then return 1; fi
   check-links:
     runs-on: ubuntu-latest
     steps:
