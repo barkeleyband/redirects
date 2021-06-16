@@ -4,18 +4,18 @@
 
 I use a lot of free hosting/DNS solutions for my web projects and needed a quick way to create URL redirects that would never expire. This repository (hosted via GitHub Pages) represents that functionality.
 
-I have a CloudFlare page rule set up to redirect `bfrogg.io/r/*` links here.
+I have a CloudFlare page rule set up to redirect `barkeley.band/r/*` links here.
 
 ## Usage
 
 ```
-./generate.sh "desiredurl" "newurl.com/something"
+./new.sh "desiredurl" "newurl.com/something" "desiredtitle (optional)"
 ```
-
-### Note
 
 Shortened URLs can be nested for organization purposes.
 
 ```
-./generate.sh "blog/desiredurl" "newurl.com/something"
+./new.sh "blog/desiredurl" "newurl.com/something" "desiredtitle (optional)"
 ```
+
+If you clone this repo into your own, modify `config.sh` to contain your domain name. This allows you to run `./update.sh` to pull in the latest shell scripts without affecting your redirects.
